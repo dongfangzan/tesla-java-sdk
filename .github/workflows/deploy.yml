@@ -12,6 +12,8 @@ jobs:
       run: pwd
     - name: ls
       run: ls
+    - name: enter workspace
+      run: cd doc
     - name: vuepress-deploy
       uses: jenkey2011/vuepress-deploy@v1.8.1
       env:
