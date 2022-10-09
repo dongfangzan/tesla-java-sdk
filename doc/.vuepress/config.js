@@ -1,6 +1,6 @@
 module.exports = {
     title: 'Tesla Java SDK',
-    description: '读书使人进步',
+    description: '加速全球向可持续能源的转变',
     head: [
         ['link', { rel: 'icon', href: '/tesla-logo.png' }],
         ['meta', { name: 'keywords', content: '特斯拉,Model Y,Model S,Model X,Model 3,Tesla,api,tesla' }],
