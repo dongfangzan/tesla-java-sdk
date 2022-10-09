@@ -12,12 +12,12 @@ module.exports = {
     plugins: [
         [
             '@vuepress/google-analytics', {
-            'ga': 'UA-226868573-2'
+            'ga': 'G-Z718YJ6MRQ'
         }
         ],
         [
             '@renovamen/vuepress-plugin-baidu-tongji', {
-            'ba': '919e4f5ecb3ab000e26c2f61cedc7ce0'
+            'ba': '10befa5b7f9ac8db7ba52074ce7553a7'
         }
         ]
     ],
