@@ -36,48 +36,48 @@ module.exports = {
             },
             {
                 title: '基础API',
-                // path: '/basics',
+                path: '/basics',
                 children: [
                     '/basics/authentication.html',
                     '/basics/vehicles.html'
                 ]
-            },
-            {
-                title: '状态',
-                path: '/state',
-                children: [
-                    '/state/data.html',
-                    '/state/charge.html'
-                ]
-            },
-            {
-                title: '指令',
-                // path: '/basics',
-                children: [
-                    '/basics/authentication.html'
-                ]
-            },
-            {
-                title: '流',
-                // path: '/basics',
-                children: [
-                    '/basics/authentication.html'
-                ]
-            },
-            {
-                title: '自动泊车/召唤',
-                // path: '/basics',
-                children: [
-                    '/basics/authentication.html'
-                ]
-            },
-            {
-                title: '字典',
-                // path: '/basics',
-                children: [
-                    '/basics/authentication.html'
-                ]
             }
+            // {
+            //     title: '状态',
+            //     path: '/state',
+            //     children: [
+            //         '/state/data.html',
+            //         '/state/charge.html'
+            //     ]
+            // },
+            // {
+            //     title: '指令',
+            //     path: '/basics',
+            //     children: [
+            //         '/basics/authentication.html'
+            //     ]
+            // },
+            // {
+            //     title: '流',
+            //     path: '/basics',
+            //     children: [
+            //         '/basics/authentication.html'
+            //     ]
+            // },
+            // {
+            //     title: '自动泊车/召唤',
+            //     path: '/basics',
+            //     children: [
+            //         '/basics/authentication.html'
+            //     ]
+            // },
+            // {
+            //     title: '字典',
+            //     path: '/basics',
+            //     children: [
+            //         '/basics/authentication.html'
+            //     ]
+            // }
         ]
 
     }
