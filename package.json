@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "docs:dev": "vuepress dev src",
-    "docs:build": "vuepress build src"
+    "docs:dev": "vuepress dev doc",
+    "docs:build": "vuepress build doc"
   },
   "devDependencies": {
     "vuepress": "^1.9.7",
