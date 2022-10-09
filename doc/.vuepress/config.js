@@ -3,7 +3,16 @@ module.exports = {
     description: '读书使人进步',
     head: [
         ['link', { rel: 'icon', href: '/tesla-logo.png' }],
-        ['meta', { name: 'keywords', content: '电子书,PDF,ePub,doc,document,文档,中文文档,编程,人工智能,AI,大数据,bigdata,云计算,java,c#,c++,c,python,php,sql,swift,go,golang,js,javascript,css,html,elasticsearch,es,ELK,入门教程,计算机,IT,k8s,book,docker,系统架构' }]
+        ['meta', { name: 'keywords', content: '特斯拉,Model Y,Model S,Model X,Model 3,Tesla,api,tesla' }],
+        [ 'script', {}, `
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?10befa5b7f9ac8db7ba52074ce7553a7";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();`
+        ]
     ],
     base: '/',
     markdown: {
@@ -13,11 +22,6 @@ module.exports = {
         [
             '@vuepress/google-analytics', {
             'ga': 'G-Z718YJ6MRQ'
-        }
-        ],
-        [
-            '@renovamen/vuepress-plugin-baidu-tongji', {
-            'ba': '10befa5b7f9ac8db7ba52074ce7553a7'
         }
         ]
     ],
