@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'Tesla Java SDK',
+    title: 'Tesla Json API',
     description: '加速全球向可持续能源的转变',
     head: [
         ['link', { rel: 'icon', href: '/tesla-logo.png' }],
