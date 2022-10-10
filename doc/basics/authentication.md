@@ -162,7 +162,7 @@ Authorization: Bearer {access_token}
 |参数|类型|例子|描述|
 |:-|:-|:-|:-|
 |client_id|String,必填|`ownerapi`|OAuth Client Id，通常直接填写`ownerapi`|
-|grant_type|String,必填|`authorization_code` |授权类型，这里直接写`refresh_token` |
+|grant_type|String,必填|`refresh_token` |授权类型，这里直接写`refresh_token` |
 |refresh_token|String,必填|`eyJrefresh`|在上一步骤中获取到的refresh token|
 |scope|String,必填|`openid email offline_access` | 固定值|
 
