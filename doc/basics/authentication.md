@@ -31,7 +31,9 @@ https://auth.tesla.cn/oauth2/v3/authorize?client_id=ownerapi&redirect_uri=https:
 |state|String,必填|123|你可以自己随机一个字符串，在认证完成后特斯拉会返回这个字符串供你进行校验|
 |login_hint|String,非必填|elon_musk@tesla.com|用来认证的特斯拉账号|
 
-其中关键的参数为`code verifier`和`code challenge`。`code verifier`是一个长度为86的随机字符串，`code challenge`是对`code verifier`用SHA256进行哈希后再用base64进行编码后生成的字符串，Java代码如下
+其中关键的参数为`code verifier`和`code challenge`。`code verifier`是一个长度为86的随机字符串，`code challenge`是对`code verifier`用SHA256进行哈希后再用url safe base64进行编码后生成的字符串，Java代码如下
+> 注意，这里的base64是url safe base64，不是普通的base64，如果你用错了，那就会出点小问题
+
 ```java
 /**
  * 根据code verifier获取code challenge，本方法使用commons-codec包
