@@ -1,5 +1,5 @@
 # 认证 Authentication
-有别于App，特斯拉使用了一个单独的SSO单点登录认证，协议为OAuth2.0，在认证通过后会返回一个access token和一个refresh token。access token的有效期为8小时，过期后可以使用refresh token去刷新access token的有效期。原则上来说，只要不修改密码，就可以一直使用refresh token来获取特斯拉的访问权限。
+特斯拉基于OAuth2.0搭建了一个认证中心用于单点登录，在认证通过后会返回一个access token和一个refresh token。access token的有效期为8小时，过期后可以使用refresh token去刷新access token的有效期。原则上来说，只要不修改密码，就可以一直使用refresh token来获取特斯拉的访问权限。
 
 > PS：首先大家需要理解OAuth2.0协议到底是干什么的，这里我就不多科普，感兴趣的同学可以看一下阮一峰的博客，详细解释了[OAuth协议](https://www.ruanyifeng.com/blog/2019/04/oauth-grant-types.html)，而且特斯拉就使用了文中的第一种，授权码方式。
 
