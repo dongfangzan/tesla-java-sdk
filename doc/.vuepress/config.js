@@ -66,7 +66,6 @@ module.exports = {
             },
             {
                 title: '指令',
-                path: '/command',
                 children: [
                     '/command/wake.html',
                     '/command/alerts.html',
