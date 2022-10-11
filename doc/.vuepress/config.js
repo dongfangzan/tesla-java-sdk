@@ -63,18 +63,22 @@ module.exports = {
                     '/state/mobile.html',
                     '/state/nearby.html'
                 ]
+            },
+            {
+                title: '指令',
+                path: '/command',
+                children: [
+                    '/command/wake.html',
+                    '/command/alerts.html',
+                    '/command/remote-start.html',
+                    '/command/homelink.html',
+                    '/command/speed-limit.html'
+                ]
             },{
                 title: '关于我',
                 path: '/about-me.html',
                 children: []
             }
-            // {
-            //     title: '指令',
-            //     path: '/basics',
-            //     children: [
-            //         '/basics/authentication.html'
-            //     ]
-            // },
             // {
             //     title: '流',
             //     path: '/basics',
