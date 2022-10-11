@@ -17,8 +17,8 @@ Vehicle|车辆|不多解释
 State|状况|有朋友看到这个单词可能会觉得这不是状态的意思么，但其实在特斯拉接口中主要读取车辆的基本信息、充电信息、驾驶信息等等，与状态的含义并不相同
 
 ## 在开始之前
-特斯拉所有的api的base URI地址是`[https://owner-api.vn.cloud.tesla.cn/](https://owner-api.teslamotors.com/)`（不包含流和自动泊车API）。
-> 特斯拉在国内和国外的地址是不一样的，如果你不在国内，可以使用[https://owner-api.teslamotors.com/](https://owner-api.teslamotors.com/)。
+特斯拉所有的api的base URI地址是`https://owner-api.vn.cloud.tesla.cn/` （不包含流和自动泊车API）。
+> 特斯拉在国内和国外的地址是不一样的，如果你不在国内，可以使用`https://owner-api.teslamotors.com/`。
 > 同理获取token接口中国内的域名是`auth.tesla.cn`，国外的域名是`auth.tesla.com`
 
 所有的请求需要在请求头中增加一个`User-Agent`，可以在请求头中识别请求来源。
