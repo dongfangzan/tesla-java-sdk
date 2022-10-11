@@ -186,5 +186,9 @@ Authorization: Bearer {access_token}
 }
 ```
 至此，我们就完成关于特斯拉认证接口的全部内容，后续的所有操作，都是基于获取该token之后的操作。
-
-上面所描述的关于特斯拉认证接口的流程其实还是比较复杂，如果你想一次性通过用户名和密码的直接一个方法拿到access token和refresh token，后续我会写一个脚本来帮助你实现这个功能
+::: tip
+上面所描述的关于特斯拉认证接口的流程其实还是比较复杂，如果你想一次性通过用户名和密码的直接一个方法拿到access token和refresh token，在本项目中的python文件夹下有一个tesla.py文件，你可以尝试输入下面的命令来一次性获取access_token和refresh token
+:::
+```pthon
+python3 tesla.py -e elon_musk@tesla.com -p elon_password -f token.txt
+```
