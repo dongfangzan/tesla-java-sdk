@@ -1,4 +1,8 @@
-# 认证 Authentication
+# 认证 Authentication V3
+目前网上能找到的特斯拉认证接口大多数是基于V2版本的，而且特斯拉已经封了该接口，导致大量认证程序无法正常登录，包括https://tesla-api.timdorr.com/文中写的内容也不再适用于与当前版本。
+
+本文主要基于V3版本的认证接口对该部分文档进行了重写，并提供了一键[认证工具](/basics/auth_tool.html)。
+
 特斯拉基于OAuth2.0搭建了一个认证中心用于单点登录，在认证通过后会返回一个access token和一个refresh token。access token的有效期为8小时，过期后可以使用refresh token去刷新access token的有效期。原则上来说，只要不修改密码，就可以一直使用refresh token来获取特斯拉的访问权限。
 
 ::: tip 关于OAuth
@@ -31,7 +35,7 @@ https://auth.tesla.cn/oauth2/v3/authorize?client_id=ownerapi&redirect_uri=https:
 |参数|类型|例子|描述|
 |:-|:-|:-|:-|
 |client_id|String,必填|ownerapi|OAuth Client Id，通常直接填写"ownerapi"|
-|code_challenge|String,必填|通过下述代码生成|我也说不清干嘛的|
+|code_challenge|String,必填|通过下述代码生成|用于认证过程中获取code和交换token|
 |code_challenge_method|String,必填|S256|生成code challenge的方法，这里直接写"S256"|
 |redirect_uri|String,必填|`https://auth.tesla.com/void/callback` | 这里是一个固定地址|
 |response_type|String,必填|code|oauth的响应类型，这里固定写"code"|
@@ -40,7 +44,9 @@ https://auth.tesla.cn/oauth2/v3/authorize?client_id=ownerapi&redirect_uri=https:
 |login_hint|String,非必填|elon_musk@tesla.com|用来认证的特斯拉账号|
 
 其中关键的参数为`code verifier`和`code challenge`。`code verifier`是一个长度为86的随机字符串，`code challenge`是对`code verifier`用SHA256进行哈希后再用url safe base64进行编码后生成的字符串，Java代码如下
-> 注意，这里的base64是url safe base64，不是普通的base64，如果你用错了，那就会出点小问题
+::: warning 注意
+注意，这里的base64是url safe base64，不是普通的base64，如果你用错了，那就会出点小问题。因为普通的base64通常会包含`=`，我们这些参数是要GET请求的查询参数，拼接在URL上面，所以要使用url safe base64。
+:::
 
 ```java
 /**
@@ -79,10 +85,10 @@ aklTa0pFQmludXh5dHJ2aE9wZW5HQ2ZyYU1uS3NsamVNVEdJWkNTYkZCWklkdU5rbXdYbGdDcmdUVWlx
 code challenge:
 NTA3NzE5NzFlZDljNWExODMzMjFlYTJmNmRjNDNlMzMzMzBhYmM4NTgyZDhjNjAzZTRlOGIxOWUxOTc2MGYwYQ
 ```
-在渲染的特斯拉登录页面中可以看到一个form表单，里面包含了一个隐藏的input，来防御CSRF。同时这里还包含了`_csrf`,`_phase`,`_process`,`transaction_id`,`cancel`标签，这些标签中的值可能会根据特斯拉服务端进行变化，并在认证过程中需要带在POST请求的请求体中。这里其实是爬取特斯拉页面中的各类input标签，然后将上述四个标签的值和你的账号密码通过POST请求的Form Data向认证服务器发起请求进行认证。
-<img :src="$withBase('/images/login-form.png')" alt="cover">
+在渲染的特斯拉登录页面中可以看到一个form表单，里面包含了一个隐藏的input，来防御CSRF。同时这里还包含了`_csrf`,`_phase`,`_process`,`transaction_id`,`cancel`标签，这些标签中的值可能会根据特斯拉服务端进行变化，并在认证过程中需要带在POST请求的请求体中。
 
-当然其实可以不必关注这些细节，选择直接在特斯拉提供的页面中输入你的特斯拉账号密码，并进行登录即可。
+从原理上讲，我们就需要爬取特斯拉页面中的各类input标签，然后将上述四个标签的值和你的账号密码通过POST请求向认证服务器发起请求进行认证。
+<img :src="$withBase('/images/login-form.png')" alt="cover">
 
 ### 第二步，获取认证code
 ::: warning 注意
