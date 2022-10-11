@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'Tesla Json API',
+    title: 'Tesla Json API（非官方，中文版）',
     description: '加速全球向可持续能源的转变',
     head: [
         ['link', { rel: 'icon', href: '/tesla-logo.png' }],
