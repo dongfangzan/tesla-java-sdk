@@ -44,6 +44,7 @@ module.exports = {
                 path: '/basics',
                 children: [
                     '/basics/authentication.html',
+                    '/basics/auth_tool.html',
                     '/basics/vehicles.html'
                 ]
             }
