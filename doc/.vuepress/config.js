@@ -47,15 +47,22 @@ module.exports = {
                     '/basics/auth_tool.html',
                     '/basics/vehicles.html'
                 ]
+            },
+            {
+                title: '状态',
+                path: '/state',
+                children: [
+                    '/state/data.html',
+                    '/state/vehicle.html',
+                    '/state/charge.html',
+                    '/state/climate.html',
+                    '/state/drive.html',
+                    '/state/GUI.html',
+                    '/state/config.html',
+                    '/state/mobile.html',
+                    '/state/nearby.html'
+                ]
             }
-            // {
-            //     title: '状态',
-            //     path: '/state',
-            //     children: [
-            //         '/state/data.html',
-            //         '/state/charge.html'
-            //     ]
-            // },
             // {
             //     title: '指令',
             //     path: '/basics',
