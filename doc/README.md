@@ -7,6 +7,9 @@
 还有一位外国大佬通过逆向特斯拉APP的方式，扒出来特斯拉使用的蓝牙协议以及如何与特斯拉车机进行交互的文档，感兴趣的也可以看下[特斯拉低功耗蓝牙接口](https://teslabtapi.lexnastin.com/)。
 
 ## 感谢与支持
+<a href="https://github.com/dongfangzan/tesla-java-sdk" target="_blank"><img src="https://img.shields.io/github/stars/dongfangzan/tesla-java-sdk?style=social" style="top: 5px"></img></a>
+<a href="https://github.com/dongfangzan/tesla-java-sdk" target="_blank"><img src="https://img.shields.io/github/forks/dongfangzan/tesla-java-sdk?label=Fork&style=social" style="top: 5px"></img></a>
+
 如果这份文档对你有帮助，欢迎到GitHub给我一颗星星[Star](https://github.com/dongfangzan/tesla-java-sdk)
 
 你的支持就是我前进的最大动力
