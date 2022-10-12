@@ -83,18 +83,17 @@ module.exports = {
                     '/command/sharing.html',
                     '/command/software-update.html'
                 ]
-            },{
+            },
+            {
+                title: '流',
+                path: '/streaming/',
+                children: []
+            },
+            {
                 title: '关于我',
                 path: '/about-me.html',
                 children: []
             }
-            // {
-            //     title: '流',
-            //     path: '/basics',
-            //     children: [
-            //         '/basics/authentication.html'
-            //     ]
-            // },
             // {
             //     title: '自动泊车/召唤',
             //     path: '/basics',
