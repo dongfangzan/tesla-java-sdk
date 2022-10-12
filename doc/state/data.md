@@ -4,6 +4,11 @@
 ::: tip
 这个接口需要车辆处于`唤醒`状态
 :::
+### Url Parameters
+参数|例子|描述
+:-|:-|:-
+endpoints|`charge_state;climate_state`|指定返回你需要的状态数据，多个用`;`分割
+
 ### Response
 ::: details 点击查看详情
 ```json

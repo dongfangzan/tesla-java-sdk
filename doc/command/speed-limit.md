@@ -4,7 +4,7 @@
 ### Parameters
 参数|例子|描述
 :-|:-|:-
-limit_mph|65|最大速度，英里50-90
+limit_mph|65|最大速度，英里50-90(80-145km/h)
 ### Response
 ```json
 {
