@@ -71,7 +71,17 @@ module.exports = {
                     '/command/alerts.html',
                     '/command/remote-start.html',
                     '/command/homelink.html',
-                    '/command/speed-limit.html'
+                    '/command/speed-limit.html',
+                    '/command/valet-mode.html',
+                    '/command/sentry-mode.html',
+                    '/command/door.html',
+                    '/command/frunk-trunk.html',
+                    '/command/windows.html',
+                    '/command/charging.html',
+                    '/command/climate.html',
+                    '/command/media.html',
+                    '/command/sharing.html',
+                    '/command/software-update.html'
                 ]
             },{
                 title: '关于我',
