@@ -12,7 +12,14 @@ module.exports = {
               var s = document.getElementsByTagName("script")[0]; 
               s.parentNode.insertBefore(hm, s);
             })();`
-        ]
+        ],
+        [ 'script', {}, `  
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Z718YJ6MRQ');`
+        ],
+        [ 'script', {src:'https://www.googletagmanager.com/gtag/js?id=G-Z718YJ6MRQ'}]
     ],
     base: '/',
     markdown: {
