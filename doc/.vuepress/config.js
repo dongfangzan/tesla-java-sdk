@@ -41,7 +41,7 @@ module.exports = {
                 children: []
             },
             {
-                title: '基础API',
+                title: '基础 API',
                 path: '/basics',
                 children: [
                     '/basics/authentication.html',
@@ -50,7 +50,7 @@ module.exports = {
                 ]
             },
             {
-                title: '状态',
+                title: '状态 State',
                 path: '/state',
                 children: [
                     '/state/data.html',
@@ -65,7 +65,7 @@ module.exports = {
                 ]
             },
             {
-                title: '指令',
+                title: '指令 Command',
                 children: [
                     '/command/wake.html',
                     '/command/alerts.html',
@@ -85,8 +85,13 @@ module.exports = {
                 ]
             },
             {
-                title: '流',
+                title: '流 Streaming',
                 path: '/streaming/',
+                children: []
+            },
+            {
+                title: '字典 Option Code',
+                path: 'option-code.html',
                 children: []
             },
             {
